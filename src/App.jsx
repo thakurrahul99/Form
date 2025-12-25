@@ -1,11 +1,9 @@
-import React,{ useState } from 'react'
-import Counter from './components/counter'
+import React from 'react'
 import Form from './components/form'
 
 function App() {
  return (
   <>
-    {/* <Counter/> */}
     <Form/>
   </>
  )

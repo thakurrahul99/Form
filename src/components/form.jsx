@@ -21,6 +21,18 @@ const Form = () => {
     setText(text.toLowerCase());
   }
 
+ function capitalizeEachWord() {
+   setText(
+     text
+       .toLowerCase()
+       .split(" ")
+       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+       .join(" ")
+   );
+ }
+
+
+
   function resetText() {
     setText("");
   }
@@ -59,6 +71,16 @@ const Form = () => {
           >
             Lowercase
           </button>
+
+          <button
+            type="button"
+            className="btn btn-success"
+            onClick={capitalizeEachWord}
+            disabled={!text}
+          >
+            Capitalize First Letter
+          </button>
+
           <button
             type="button"
             className="btn btn-danger"
